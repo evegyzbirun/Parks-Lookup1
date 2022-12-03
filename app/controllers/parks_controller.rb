@@ -1,33 +1,33 @@
 class ParksController < ApplicationController
 
   def index
-    @parks = {"park": "Crater Lake National Park."}
-    json_response(@parks)
+    @park_locations = {"park_name": "Crater Lake National Park."}
+    json_response(@park_locations)
   end
 
 
   def show
-    @parks = Park.find(params[:id])
-    json_response(@park)
+    @park_locations = Park.find(params[:id])
+    json_response(@park_location)
   end
 
   def create
-    @parks = Park.create(park_params)
-    json_response(@park)
+    @park_locations = Park.create(park_location_params)
+    json_response(@park_location)
   end
 
   def update
-    @park = Park.find(params[:id])
-    @park.update(park_params)
+    @park_location = Park.find(params[:id])
+    @park_location.update(park_location_params)
   end
 
   def destroy
-    @park = Park.find(params[:id])
-    @park.destroy
+    @park_location = Park.find(params[:id])
+    @park_location.destroy
   end
 
   private
-  def park_params
+  def park_location_params
     params.permit(:state, :park)
   end
 end

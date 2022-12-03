@@ -6,21 +6,28 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 class Seed
-
+  Park.destroy_all
   def self.begin
     seed = Seed.new
-    seed.generate_parks
+    seed.generate_park_locations
   end
 
-  def generate_parks
-    20.times do |i|
-      park = Park.create!(
-        state: Faker::Book.state,
-        park: Faker::Movie.park
-      )
-      puts "Park #{i}: Name of the state: #{park.state} has '#{park.park}'."
+  def generate_park_locations
+    # 5.times do |i|
+    #   park = Park.create!(
+    #     state: Faker::Address.state,
+    #     park: Faker::NationalPark.state.park
+    #   )
+    park_location =  Park.create!(state: "Oregon",
+                                  park: "Valley of the Rogue State Park")
+
+    park_location =  Park.create!(state: "Washington",
+                                  park: "Alta Lake")
+
+
+      puts "Name of the state: #{park_location.state} has '#{park_location.park}'."
     end
   end
-end
+
 
 Seed.begin
