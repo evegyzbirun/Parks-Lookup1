@@ -7,23 +7,30 @@ class ParksController < ApplicationController
 
 
   def show
-    @park_locations = Park.find(params[:id])
+    @park_location = Park.find(params[:id])
     json_response(@park_location)
   end
 
   def create
-    @park_locations = Park.create(park_location_params)
-    json_response(@park_location)
+    @park_location = Park.create(park_location_params)
+    json_response(@park_location, :created)
   end
 
   def update
     @park_location = Park.find(params[:id])
-    @park_location.update(park_location_params)
+    if @park_location.update!(park_location_params)
+      render status: 200, json: {
+      message: "This park_location has been updated successfully."}
+    end
   end
 
   def destroy
     @park_location = Park.find(params[:id])
-    @park_location.destroy
+    if @park_location.destroy!
+      render status: 200, json: {
+      message: "This park_location has been deleted successfully."}
+    end
+    
   end
 
   private
