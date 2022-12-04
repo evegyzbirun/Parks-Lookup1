@@ -2,6 +2,8 @@ class ParksController < ApplicationController
 
   def index
     @parks = Park.all
+    state = params[:state]
+    @parks = Park.search(state)
     json_response(@parks)
   end
 
@@ -12,7 +14,7 @@ class ParksController < ApplicationController
   end
 
   def create
-    @park = Park.create(park_params)
+    @park = Park.create!(park_params)
     json_response(@park, :created)
   end
 

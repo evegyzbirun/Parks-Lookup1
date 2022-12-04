@@ -16,10 +16,10 @@ class Seed
 
   def generate_parks
    
-    park =  Park.create(state: "Oregon",
+    park =  Park.create!(state: "Oregon",
                                   park: "Valley of the Rogue State Park")
 
-    park =  Park.create(state: "Washington",
+    park =  Park.create!(state: "Washington",
                                   park: "Alta Lake")
 
 
