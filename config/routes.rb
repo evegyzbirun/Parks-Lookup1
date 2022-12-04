@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :parks
+
+  match '*path', :to => 'application#routing_error', via: [:all]
 end

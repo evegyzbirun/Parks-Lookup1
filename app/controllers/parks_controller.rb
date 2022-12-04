@@ -1,7 +1,8 @@
 class ParksController < ApplicationController
 
   def index
-    @park_locations = {"park_name": "Crater Lake National Park."}
+    states = params[:states]
+    @park_locations = Park.search(states)
     json_response(@park_locations)
   end
 
