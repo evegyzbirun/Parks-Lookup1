@@ -1,41 +1,40 @@
 class ParksController < ApplicationController
 
   def index
-    states = params[:states]
-    @park_locations = Park.search(states)
-    json_response(@park_locations)
+    @parks = Park.all
+    json_response(@parks)
   end
 
 
   def show
-    @park_location = Park.find(params[:id])
-    json_response(@park_location)
+    @park = Park.find(params[:id])
+    json_response(@park)
   end
 
   def create
-    @park_location = Park.create(park_location_params)
-    json_response(@park_location, :created)
+    @park = Park.create(park_params)
+    json_response(@park, :created)
   end
 
   def update
-    @park_location = Park.find(params[:id])
-    if @park_location.update!(park_location_params)
+    @park = Park.find(params[:id])
+    if @park.update!(park_params)
       render status: 200, json: {
-      message: "This park_location has been updated successfully."}
+      message: "This park has been updated successfully."}
     end
   end
 
   def destroy
-    @park_location = Park.find(params[:id])
-    if @park_location.destroy!
+    @park = Park.find(params[:id])
+    if @park.destroy!
       render status: 200, json: {
-      message: "This park_location has been deleted successfully."}
+      message: "This park has been deleted successfully."}
     end
     
   end
 
   private
-  def park_location_params
+  def park_params
     params.permit(:state, :park)
   end
 end

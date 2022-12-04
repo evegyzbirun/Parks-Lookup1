@@ -3,9 +3,9 @@ class Park < ApplicationRecord
   validates :park, presence: true
 
 
-  def self.search(park_location_state)
+  def self.search(park_state)
     
-    Park.where("state = ?", ("#{park_location_state}"))
+    Park.where("state = ?", ("#{park_state}"))
     
     
   end

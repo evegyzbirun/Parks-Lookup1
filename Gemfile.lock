@@ -67,7 +67,6 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     bcrypt (3.1.18)
-    bindex (0.8.1)
     bootsnap (1.15.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -180,11 +179,6 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2022.6)
       tzinfo (>= 1.0.0)
-    web-console (4.2.0)
-      actionview (>= 6.0.0)
-      activemodel (>= 6.0.0)
-      bindex (>= 0.4.0)
-      railties (>= 6.0.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -208,7 +202,6 @@ DEPENDENCIES
   rake
   rspec-rails
   tzinfo-data
-  web-console
 
 RUBY VERSION
    ruby 3.1.2p20

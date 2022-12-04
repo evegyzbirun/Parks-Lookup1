@@ -7,26 +7,26 @@
 #   Character.create(name: "Luke", movie: movies.first)
 class Seed
   Park.destroy_all
+
+
   def self.begin
     seed = Seed.new
-    seed.generate_park_locations
+    seed.generate_parks
   end
 
-  def generate_park_locations
-    # 5.times do |i|
-    #   park = Park.create!(
-    #     state: Faker::Address.state,
-    #     park: Faker::NationalPark.state.park
-    #   )
-    park_location =  Park.create!(state: "Oregon",
+  def generate_parks
+   
+    park1 =  Park.create(state: "Oregon",
                                   park: "Valley of the Rogue State Park")
 
-    park_location =  Park.create!(state: "Washington",
+    park2 =  Park.create(state: "Washington",
                                   park: "Alta Lake")
 
 
-      puts "Name of the state: #{park_location.state} has '#{park_location.park}'."
+     
     end
+    # puts "Name of the state: #{park1.state} has '#{park1.park}'."
+    # puts "Name of the state: #{park2.state} has '#{park2.park}'."
   end
 
 
