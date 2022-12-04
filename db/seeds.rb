@@ -16,17 +16,17 @@ class Seed
 
   def generate_parks
    
-    park1 =  Park.create(state: "Oregon",
+    park =  Park.create(state: "Oregon",
                                   park: "Valley of the Rogue State Park")
 
-    park2 =  Park.create(state: "Washington",
+    park =  Park.create(state: "Washington",
                                   park: "Alta Lake")
 
 
      
     end
-    # puts "Name of the state: #{park1.state} has '#{park1.park}'."
-    # puts "Name of the state: #{park2.state} has '#{park2.park}'."
+    
+    
   end
 
 
