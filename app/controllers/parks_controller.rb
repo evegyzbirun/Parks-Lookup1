@@ -7,6 +7,11 @@ class ParksController < ApplicationController
     json_response(@parks)
   end
 
+  # def search
+  #   state = params[:state]
+  #   @parks = Park.search(state)
+  #   json_response(@parks)
+  # end
 
   def show
     @park = Park.find(params[:id])
