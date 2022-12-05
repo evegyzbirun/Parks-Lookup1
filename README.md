@@ -29,27 +29,21 @@
 
 ## API endpoints
 
-Return all parks with states(method: GET),(URL: localhost:3000/parks)
-Return a specific
-
-|what it does|method|url|params|
-|Return all parks with states|GET|localhost:3000/parks|----|
-
 <table>
     <thead>
       <tr>
-        <th>words</th>
-        <th>transform to</th>
-        <th>keepUpperCase is false</th>
-        <th>keepUpperCase is true</th>
+        <th>what it does</th>
+        <th>method</th>
+        <th>url</th>
+        <th>params</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-            <td>"XML HTTP request"</td>
-            <td>pascalCase</td>
-            <td><code>XmlHttpRequest</code></td>
-            <td><code>XMLHTTPRequest</code></td>
+            <td>Return all parks with states</td>
+            <td>GET</td>
+            <td><code>localhost:3000/parks</code></td>
+            <td><code></code></td>
         </tr>
         <tr>
             <td>"new customer ID"</td>
