@@ -29,7 +29,11 @@
 
 ## API endpoints
 
+Return all parks with states(method: GET),(URL: localhost:3000/parks)
+Return a specific
 
+|what it does|method|url|params|
+|Return all parks with states|GET|localhost:3000/parks|----|
 
 
 
