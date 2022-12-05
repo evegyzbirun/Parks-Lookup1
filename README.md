@@ -46,10 +46,34 @@
             <td><code></code></td>
         </tr>
         <tr>
-            <td>"new customer ID"</td>
-            <td>camelCase</td>
-            <td><code>newCustomerId</code></td>
-            <td><code>newCustomerID</code></td>
+            <td>Return a specific park</td>
+            <td>GET</td>
+            <td><code>localhost:3000/parks/:id</code></td>
+            <td><code></code></td>
+        </tr>
+         <tr>
+            <td>Search for park</td>
+            <td>GET</td>
+            <td><code>localhost:3000/parks?state=</code></td>
+            <td><code></code>state</td>
+        </tr>
+         <tr>
+            <td>Create a park</td>
+            <td>POST</td>
+            <td><code>localhost:3000/parks</code></td>
+            <td><code></code>state, park</td>
+        </tr>
+         <tr>
+            <td>Update a park</td>
+            <td>PATCH</td>
+            <td><code>localhost:3000/parks/:id</code></td>
+            <td><code></code>state, park</td>
+        </tr>
+         <tr>
+            <td>DeleteE a park</td>
+            <td>DELETE</td>
+            <td><code>localhost:3000/parks/:id</code></td>
+            <td><code></code></td>
         </tr>
     </tbody>
   </table>
