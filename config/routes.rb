@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
-  resources :parks
-
-  match '*path', :to => 'application#routing_error', via: [:all]
+    namespace :api do
+      namespace :v1 do
+        resources :parks
+    end
+  end
 end
