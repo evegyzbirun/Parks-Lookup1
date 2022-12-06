@@ -3,18 +3,14 @@ module Api
     class ParksController < ApplicationController
 
       def index
-        # render json: Park.all
-        @parks = Park.all
-        state = params[:state]
-        @parks = Park.search(state)
-        json_response(@parks)
+        
+        if state = params[:state]
+          @parks = Park.search(state)
+          json_response(@parks)
+        else @parks = Park.all
+          json_response(@parks)
+        end
       end
-
-      # def search
-      #   state = params[:state]
-      #   @parks = Park.search(state)
-      #   json_response(@parks)
-      # end
 
       def show
         @park = Park.find(params[:id])
