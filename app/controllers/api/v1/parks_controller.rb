@@ -3,11 +3,18 @@ module Api
     class ParksController < ApplicationController
 
       def index
+        # render json: Park.all
         @parks = Park.all
         state = params[:state]
         @parks = Park.search(state)
         json_response(@parks)
       end
+
+      # def search
+      #   state = params[:state]
+      #   @parks = Park.search(state)
+      #   json_response(@parks)
+      # end
 
       def show
         @park = Park.find(params[:id])
@@ -15,8 +22,17 @@ module Api
       end
 
       def create
+        # @park = Park.create!(park_params)
+        # json_response(@park, :created)
+
         @park = Park.create!(park_params)
-        json_response(@park, :created)
+        
+        if @park.save
+          render json: park, status: :created
+          
+        else
+          render json: park.errors, status: :unprocessable_entity
+        end
       end
 
       def update

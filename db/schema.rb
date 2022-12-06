@@ -22,6 +22,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_04_160756) do
   create_table "parks", force: :cascade do |t|
     t.string "state"
     t.string "park"
+
   end
 
 end

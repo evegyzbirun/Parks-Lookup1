@@ -4,10 +4,6 @@ class Park < ApplicationRecord
 
 
   def self.search(park_state)
-    
     Park.where("state = ?", ("#{park_state}"))
-    
-    
   end
-
 end
