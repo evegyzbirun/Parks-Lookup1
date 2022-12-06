@@ -25,7 +25,7 @@
 4. run (pg_ctl start) for the Postgres server
 4. make sure you have psql database up(rake/rails db:setup) run (rake db:seed)
 5. run rails s to get live server run
-6. can check API calls (http://localhost:3000/parks?state=Oregon)
+6. can check API calls (http://127.0.0.1:3000/api/v1/parks?state=Oregon)
 
 ## API endpoints
 
@@ -42,37 +42,37 @@
         <tr>
             <td>Return all parks with states</td>
             <td>GET</td>
-            <td><code>localhost:3000/parks</code></td>
+            <td><code>localhost:3000/api/v1/parks</code></td>
             <td><code></code></td>
         </tr>
         <tr>
             <td>Return a specific park</td>
             <td>GET</td>
-            <td><code>localhost:3000/parks/:id</code></td>
+            <td><code>localhost:3000api/v1/parks/:id</code></td>
             <td><code></code></td>
         </tr>
          <tr>
             <td>Search for park</td>
             <td>GET</td>
-            <td><code>localhost:3000/parks?state=</code></td>
+            <td><code>localhost:3000/api/v1/parks?state=</code></td>
             <td><code></code>state</td>
         </tr>
          <tr>
             <td>Create a park</td>
             <td>POST</td>
-            <td><code>localhost:3000/parks</code></td>
+            <td><code>localhost:3000/api/v1/parks</code></td>
             <td><code></code>state, park</td>
         </tr>
          <tr>
             <td>Update a park</td>
             <td>PATCH</td>
-            <td><code>localhost:3000/parks/:id</code></td>
+            <td><code>localhost:3000/api/v1/parks/:id</code></td>
             <td><code></code>state, park</td>
         </tr>
          <tr>
             <td>DeleteE a park</td>
             <td>DELETE</td>
-            <td><code>localhost:3000/parks/:id</code></td>
+            <td><code>localhost:3000/api/v1/parks/:id</code></td>
             <td><code></code></td>
         </tr>
     </tbody>
